@@ -14,7 +14,9 @@ group :development do
   gem 'capistrano', '~> 3.1.0'
   gem 'capistrano3-unicorn', require: false
   gem 'shotgun'
+end
 
+group :development, :test do
   gem 'rb-fsevent', '>= 0.9.3', require: false if RUBY_PLATFORM =~ /darwin/i
   gem 'guard'
   gem 'guard-rspec', require: false
